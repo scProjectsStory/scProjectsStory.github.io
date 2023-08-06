@@ -1,0 +1,94 @@
+.main{
+width:80%;
+margin:auto;
+}
+.topmenu{
+width:100%;
+display:flex;
+justify-content: space-between;
+}
+.topmenuitem div:nth-child(1){
+font-size:13px;
+color:rgb(213,17,0);
+border-bottom: dotted 1px gray;
+}
+.topmenuitem div:nth-child(2){
+font-size:13px;
+}
+.topmenuitem div:nth-child(2) span{
+padding:0 5px 5px 5px;
+color:#555;
+cursor:pointer;
+}
+.topmenuitem div:nth-child(2) img{
+width:20px;
+cursor:pointer;
+}
+.topmenuitemsel{
+border-radius:0px 0px 5px 5px;
+background:#666;
+color:#fff;
+}
+
+.content{
+display:flex;
+}
+.rightbar{
+width:180px;
+width:200px;
+border-radius:10px;
+border:1px solid #333;
+padding:10px;
+margin-top:20px;
+}
+.rightbar div:nth-child(1){
+font-size:18px;
+color:rgb(213,17,0);
+font-weight:bold;
+}
+.rightbar div select{
+width:100%;
+}
+
+.rightbar div p{
+display:flex;
+padding:0px;
+margin:0px;
+font-size:12px;
+padding-top:10px;
+}
+.rightbar div p span:nth-child(1){
+width:15px;
+height:15px;
+margin-right:5px;
+}
+.rightbar div p span:nth-child(2){
+line-height:15px;
+}
+
+.maptip{
+	border-radius:10px;
+	width:210px;
+	padding:10px;
+	background:#3366dd;
+	color:#fff;
+}
+.maptip div:nth-child(1){
+	font-size:20px;
+	font-weight:bold;
+	padding-bottom:10px;
+}
+.maptip div:nth-child(n+2){
+	font-size:16px;
+	line-height:20px;
+}
+.maptip div:nth-child(n+2){
+	display:flex;
+}
+.maptip div span:nth-child(1){
+	width:135px;
+	font-weight:bold;
+}
+.maptip div span:nth-child(2){
+	padding-left:10px;
+}

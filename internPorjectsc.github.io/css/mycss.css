@@ -1,0 +1,162 @@
+.main{
+padding: 50px;
+margin-top:80px;
+margin-bottom:40px;
+position: relative;
+height:950px
+}
+.xx{
+width:100%;padding-left:50px;margin: auto;
+}
+.topmenu{
+width:2200px;
+display:flex;
+margin-right:auto;
+margin-left:auto;
+}
+.topmenuitem div:nth-child(1){
+font-size:35px;
+color:#8246AF;
+border-bottom: dotted 1px gray;
+margin:20px;
+font-weight:bold;
+}
+.topmenuitem div:nth-child(2){
+font-size:28px;
+}
+.topmenuitem div:nth-child(2) span{
+padding:3px 3px 3px 5px;
+color:#555;
+cursor:pointer;
+}
+.topmenuitem div:nth-child(2) img{
+width:20px;
+cursor:pointer;
+}
+.topmenuitemsel{
+border-radius:0px 0px 5px 5px;
+background:#8246AF;
+color:#8246AF;
+}
+
+.content{
+display:flex;
+justify-content: center;
+}
+
+
+.rightbar{
+width:300px;
+height:300px;
+padding:10px;
+margin-top:50px;
+display: flex;
+flex-direction: column;
+background: #E6E6FA;
+padding: 5px 15px;
+border-radius: 10px;
+box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+.rightbar div:nth-child(1){
+font-size:30px;
+color:rgb(213,17,0);
+font-weight:bold;
+}
+.rightbar div select{
+width:100%;
+font-size:25px;
+}
+
+.rightbar div p{
+display:flex;
+padding:0px;
+margin:3px;
+font-size:23px;
+padding-top:10px;
+font-weight:bold;
+}
+
+.rightbar_intro div:nth-child(1){
+font-size:30px;
+color:rgb(213,17,0);
+font-weight:bold;
+}
+
+.rightbar_intro div p{
+display:flex;
+padding:0px;
+margin:0px;
+font-size:30px;
+padding-top:10px;
+}
+
+.rightbar_intro{
+width:300px;
+height:350px;
+
+padding:10px;
+margin-top:50px;
+display: flex;
+flex-direction: column;
+background: #E6E6FA;
+padding: 5px 15px;
+border-radius: 10px;
+box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+.rightbar div p span:nth-child(1){
+width:15px;
+height:15px;
+margin-right:5px;
+}
+.rightbar div p span:nth-child(2){
+line-height:15px;
+}
+
+#pie {
+width: 400px;
+height: 400px;
+flex-direction: column;
+display:flex;
+margin-left:30px;
+}
+#line {
+width: 400px;
+height: 400px;
+flex-direction: column;
+display:flex;
+margin-left:30px;
+}
+
+.maptip{
+	border-radius:10px;
+	width:210px;
+	padding:10px;
+	background:	#9370DB;
+	color:#fff;
+}
+.maptip div:nth-child(1){
+	font-size:21px;
+	font-weight:bold;
+	padding-bottom:10px;
+}
+.maptip div:nth-child(n+2){
+	font-size:16px;
+	line-height:20px;
+}
+.maptip div:nth-child(n+2){
+	display:flex;
+}
+.maptip div span:nth-child(1){
+	width:135px;
+	font-weight:bold;
+}
+.maptip div span:nth-child(2){
+	padding-left:10px;
+}
+
+.col-lg-6 li {
+      position: absolute;
+      left: 0;
+      transition: 0.4s;
+ }
