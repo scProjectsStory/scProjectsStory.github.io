@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  // The catogram idea of this page main came from Elijah Meeks's catogram function application(https://github.com/emeeks),
+  // and main page styles came from KILN's data visualization, more detailed information is in code
+
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/lineicons.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/default.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/echarts.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/jquery.easing.min.js"></script>
+  <script src="js/scrolling-nav.js"></script>
+  <script src="js/main.js"></script>
+  <script src="http://d3js.org/d3.v2.min.js"></script>
+  <script src="js/colorbrewer.js"></script>
+  <script src="js/topojson.js"></script>
+  <script src="js/cartogram.js"></script>
+
+</head>
+<body onload="init()">
+<!--citation: this part of the content is partly from the template, the link is lost no longer quoted-->
+<div class="preloader">
+  <div class="loader">
+    <div class="ytp-spinner">
+      <div class="ytp-spinner-container">
+        <div class="ytp-spinner-rotator">
+          <div class="ytp-spinner-left">
+            <div class="ytp-spinner-circle"></div>
+          </div>
+          <div class="ytp-spinner-right">
+            <div class="ytp-spinner-circle"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<header class="header_area">
+  <div class="header_navbar">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="index.html">
+              <img src="images/hcc3.png" alt="Logo">
+            </a>
+            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+              <ul id="nav" class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="page-scroll" href="#home">Intro</a>
+                </li>
+                <li class="nav-item">
+                  <a class="page-scroll" href="#growth">Show</a>
+                </li>
+                <li class="nav-item">
+                  <a class="page-scroll" href="#hcmap">HCC info Map</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="home" class="header_slider">
+    <div class="container-fluid">
+      <div class="slider-active">
+        <div class="single_slider bg_cover d-flex align-items-center" style="background-image: url(images/hccslideex.jpg)">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-7">
+                <div class="slider_content">
+                  <h2 class="slider_title" data-animation="fadeInUp" data-delay="0.2s">Haringey council service</h2>
+                  <p data-animation="fadeInUp" data-delay="0.6s">Haringey council is one of the best community service systems in the Greater London.</p>
+                  <a class="main-btn" href="https://www.haringey.gov.uk/" data-animation="fadeInUp" data-delay="1s">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="single_slider bg_cover d-flex align-items-center" style="background-image: url(images/hccslideex2.jpg)">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-7">
+                <div class="slider_content">
+                  <h2 class="slider_title" data-animation="fadeInUp" data-delay="0.2s">Haringey city</h2>
+                  <p data-animation="fadeInUp" data-delay="0.6s"> Haringey city is one of the best community the Greater London.</p>
+                  <a class="main-btn" href="https://www.haringey.gov.uk/" data-animation="fadeInUp" data-delay="1s">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="single_slider bg_cover d-flex align-items-center" style="background-image: url(images/hccslideex3.jpg)">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-7">
+                <div class="slider_content">
+                  <h2 class="slider_title" data-animation="fadeInUp" data-delay="0.2s">Haringey annal report</h2>
+                  <p data-animation="fadeInUp" data-delay="0.6s">Click here and you will see a different Haringey.</p>
+                  <a class="main-btn" href="https://www.haringey.gov.uk/" data-animation="fadeInUp" data-delay="1s">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<!--section 2: data explain in text-->
+<div style="margin-top:90px;">
+  <section id=growth class="growth_area pt-50 blue-bg " style="height:820px;">
+    <div class="section_title text-center pb-15">
+      <h4 class=sub_title>Shinning part</h4>
+      <h3 class=title>What has happened to Haringey in the last few years</h3>
+    </div>
+    <div class=container>
+      <div class="row align-items-center">
+        <div class=col-lg-6>
+          <div class="growth_content mt-45">
+            <div class="section_title ">
+              <h4 class=sub_title>Let us show you something different in Haringey</h4>
+            </div>
+            <p>Haringey is located in North London, a Borough with three main districts and 45 LSOAs(Lower Layer Super Output Area), with a
+              total population of over 200,000. The area contains a rich and diverse London culture and is
+              a beautiful area. The crime rate in Haringey has steadily decreased over the last three years</p>
+            <h5 class=growth_title>causations on it</h5>
+            <p>The decline in crime in Haringey is due to a number of policies by the Haringey Local Authority.
+              Over the past three years, Haringey Council has introduced a number of policing measures to
+              tackle a wide range of crime types including robbery and burglary, which have helped to bring
+              the crime situation in Haringey under control.</p>
+          </div>
+        </div>
+        <div class=col-lg-6>
+          <div class="mt-50" style="margin-bottom:20px;margin-left:120px">
+            <ul style="height:230px;width:750px;padding: 0;position: relative;" id="banner"></ul>
+            <!--scroll images, citation: http://t.csdn.cn/WJexu-->
+            <script src="js/scroll.js"></script>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class=growth_shape>
+      <img class=shape src="images/shape-2.svg" alt="shape">
+    </div>
+  </section>
+</div>
+
+<div id="hcmap" class="main"  style="height:1000;margin-top:80px">
+  <div class="topshell">
+    <div class="shell">
+      <div style="border:0px;"></div>
+      <div><span><img id="none"  src="images/fresh.png"/></span></div>
+    </div>
+    <div class="shell">
+      <div>Basic</div>
+      <div>
+        <span style="margin-left:10px" id="toppop">Population</span>
+        <span id="topden">Population-density</span>
+        <span id="topage">Age</span>
+      </div>
+    </div>
+    <div class="shell">
+      <div>Wellbeing</div>
+      <div>
+        <span style="margin-left:10px" id="tophouse">Housing</span>
+        <span id="topTrans">Work-distance</span>
+        <span id="topcrime">Crime</span>
+        <span id="topgreen">Green-avail</span>
+      </div>
+    </div>
+    <div class="shell">
+      <div>Economy</div>
+      <div>
+        <span style="margin-left:10px;" id="topinc">Income-deprivation</span>
+        <span id="topempo">Employment</span>
+      </div>
+    </div>
+    <div class="shell">
+      <div>Life</div>
+      <div>
+        <span style="margin-left:10px" id="toplang">Language</span>
+        <span id="topreg">Religions</span>
+        <span id="topheal">Health</span>
+        <span id="topedu">Education-level</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="content" style="margin-top:80px">
+    <!--intro-->
+    <div class="right_new">
+      <div class="rightbar">
+        <div style="color:#8246AF">Shade By</div>
+        <div>
+          <select id="shadeSelect" onchange="changeMapColor()">
+            <option>Category</option>
+            <option>Emission</option>
+            <option>Average IMD index</option>
+            <option>Population change</option>
+          </select>
+        </div>
+        <div id="shadecolor_explain"></div>
+        <h6 id="shade_explain" style="color:#808080; padding-top:10px"></h6>
+      </div>
+      <div class="rightbar_intro">
+        <div style="color:#8246AF">intro</div>
+        <h4 id="introduction" style="color:#808080;">The map shows the information in Haringey 21 wards, please click top indexes or hover the mouse to the map to get the information</h4>
+        <h5 id="intro_explain" style="color:#808080; padding-top:20px"></h5>
+      </div>
+    </div>
+    <!-- map -->
+    <div id="map-container-hc">
+      <svg id="map-hc"></svg>
+    </div>
+    <script src="js/mapchange.js"></script>
+    <!--echarts-->
+    <div>
+      <div id="pie"></div>
+      <div id="line"></div>
+      <script src="js/piechats.js"></script>
+    </div>
+  </div>
+</div>
+
+<div id="footer" class="footer_area" style="margin-bottom:50px;margin-top:50px;">
+  <div class="containerfoot" style="margin-top:0px">
+    <div class="footer_about mt-50">
+      <ul class="social">
+        <li><img src="images/hcc3.png" alt="Logo"></li>
+        <li><a href="https://www.facebook.com/haringeycouncil/?locale=en_GB"><i class="lni lni-facebook-filled"></i></a></li>
+        <li><a href="https://twitter.com/haringeycouncil"><i class="lni lni-twitter-original"></i></a></li>
+        <li><a href="https://www.instagram.com/haringeycouncil/"><i class="lni lni-instagram-original"></i></a></li>
+        <li><a href="https://www.linkedin.com/company/haringey/"><i class="lni lni-linkedin-original"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</body>
+</html>
