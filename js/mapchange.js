@@ -29,7 +29,7 @@
         {name: "(no scale)", id: "none"},
         {name: "Population", id: "toppop", key: "Population"},
         {name: "PopulationDensity", id: "topden", key: "PopulationDensity"},
-        {name: "Crime", id: "crime", key: "topcrime"},
+        {name: "Crime", id: "topcrime", key: "Crime"},
         {name: "EducationLevel", id: "topedu", key: "EducationLevel"},
         {name: "Health", id: "topheal", key: "Health"},
         {name: "Religions", id: "topreg", key: "Religions"},
