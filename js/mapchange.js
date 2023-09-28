@@ -113,7 +113,7 @@
             .attr("fill", function (e) {return colour_map[e.properties.Category]})
             .attr("d", path);
         wards_p.append("title");
-        DrawHcMap();
+        updateAndDrawHcMap();
       }
 
       //reset element is responsible for the orientation of the page after it has been refreshed.
@@ -153,8 +153,5 @@
               });
               wards_p.transition().duration(700).attr("d", carto.path);
           }
-          hashish.attr("href", function (href) { // Update hash href
-              return href + location.hash;
-          });
       }
 
