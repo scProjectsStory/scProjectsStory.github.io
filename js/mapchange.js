@@ -1,11 +1,8 @@
-      //Main citation: these code main inspired by internet link below, some functions simulate these visualisations,main from the first link(Shawn Allen's visualization)
-      //http://prag.ma/code/d3-cartogram/
-      //http://andrewerrity.com/d3-project/
-      //https://limn.co.za/2013/10/making-a-cartogram/#:~:text=d3.cartogram%20uses%20d3.topojson%20to%20create%20the%20features%20data,like%20this%3A%20var%20features%20%3D%20carto.features%20%28topology%2C%20geometries%29
-      //https://schuelerzahlen-zuerich.opendata.iwi.unibe.ch/App2/d3geo-2/ch_var/index.html#pop_female/1991
-      //http://dev.centrogeo.org.mx/viz_desaparecidos/lib/d3-cartogram/?segmentized#intlmig/2011
-      //https://schuelerzahlen-zuerich.opendata.iwi.unibe.ch/App2/d3geo-2/
+      //Main citation: these code main inspired by internet link below, some functions simulate these visualisations,main from the first link(Shawn Allen's visualization) and some other important citation also included in this code
+      //http://prag.ma/code/d3-cartogram/ and http://andrewerrity.com/d3-project/ and https://limn.co.za/2013/10/making-a-cartogram/#:~:text=d3.cartogram%20uses%20d3.topojson%20to%20create%20the%20features%20data,like%20this%3A%20var%20features%20%3D%20carto.features%20%28topology%2C%20geometries%29
+      //https://schuelerzahlen-zuerich.opendata.iwi.unibe.ch/App2/d3geo-2/ch_var/index.html#pop_female/1991 and http://dev.centrogeo.org.mx/viz_desaparecidos/lib/d3-cartogram/?segmentized#intlmig/2011 and https://schuelerzahlen-zuerich.opendata.iwi.unibe.ch/App2/d3geo-2/
       //And the cartogram function came from : https://github.com/emeeks/d3-cartogram
+
 
       //The former effect of this page just like var fisheye = d3.fisheye.circular().distortion(4).focus([GlobalMapPathData[n].X,GlobalMapPathData[n].Y]).radius(matchData.Area*normalised_value*100), and use the fisheye obj to change the wards SVG edges
       //However, that only consider the value, didn't consider the wards' area, so based on this situation, I reuse the cartogram function to remake the effects.
