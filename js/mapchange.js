@@ -1,13 +1,15 @@
-      //Main citation: these code main inspired by internet link below, some functions simulate these visualisations,main from the first link, thanks for their inspiration
-      //https://schuelerzahlen-zuerich.opendata.iwi.unibe.ch/App2/d3geo-2/ch_var/index.html#pop_female/1991
-      //https://limn.co.za/2013/10/making-a-cartogram/#:~:text=d3.cartogram%20uses%20d3.topojson%20to%20create%20the%20features%20data,like%20this%3A%20var%20features%20%3D%20carto.features%20%28topology%2C%20geometries%29
+      //Main citation: these code main inspired by internet link below, some functions simulate these visualisations,main from the first link(Shawn Allen's visualization)
+      //http://prag.ma/code/d3-cartogram/
       //http://andrewerrity.com/d3-project/
+      //https://limn.co.za/2013/10/making-a-cartogram/#:~:text=d3.cartogram%20uses%20d3.topojson%20to%20create%20the%20features%20data,like%20this%3A%20var%20features%20%3D%20carto.features%20%28topology%2C%20geometries%29
+      //https://schuelerzahlen-zuerich.opendata.iwi.unibe.ch/App2/d3geo-2/ch_var/index.html#pop_female/1991
       //http://dev.centrogeo.org.mx/viz_desaparecidos/lib/d3-cartogram/?segmentized#intlmig/2011
       //https://schuelerzahlen-zuerich.opendata.iwi.unibe.ch/App2/d3geo-2/
-      //And the catogram function came from : https://github.com/emeeks/d3-cartogram
+      //And the cartogram function came from : https://github.com/emeeks/d3-cartogram
 
-      //The former effect of this page just like var fisheye = d3.fisheye.circular().distortion(4).focus([GlobalMapPathData[n].X,GlobalMapPathData[n].Y]).radius(matchData.Area*normalised_value*100)
-      //But that only consider the value, didn't consider the wards' area, so based on this situation, we can use cartogram function to make the effects.
+      //The former effect of this page just like var fisheye = d3.fisheye.circular().distortion(4).focus([GlobalMapPathData[n].X,GlobalMapPathData[n].Y]).radius(matchData.Area*normalised_value*100), and use the fisheye obj to change the wards SVG edges
+      //However, that only consider the value, didn't consider the wards' area, so based on this situation, I reuse the cartogram function to remake the effects.
+
       window.onload = function() {changeMapColor();refresh();};// Trigger the reset and colour change functions after the page be refreshed.
       window.onhashchange = function() {updateAndDrawHcMap();}; // Call the url hash update function.
       var colour_map = {"1": "#5470c6", "2": "#91cd77", "3": "#f9c956"};
