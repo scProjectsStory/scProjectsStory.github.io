@@ -119,7 +119,7 @@
         document.getElementById("shadecolor_explain").innerHTML = listHTML;
       }
 
-      function FreshAndDrawHcMap() {
+      function FreshAndDrawHcMap() { //fresh function change the map by url，citation link: http://prag.ma/code/d3-cartogram/
         var desiredSelectedIndexId = location.hash.substr(1).split("/")[0]; //Get the index selected by the user
         SelectedIndex = IndexesById[desiredSelectedIndexId] || Indexes[0];
         d3.selectAll(".shell div span").property("selectedIndex", Indexes.indexOf(SelectedIndex));
